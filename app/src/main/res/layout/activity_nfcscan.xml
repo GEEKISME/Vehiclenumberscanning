@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.biotag.vehiclenumberscanning.NFCScanActivity"
+    android:background="@color/pinks">
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/pink"
+        android:gravity="center">
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/tv_authority"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ALL ACCESS"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/rl_title"
+        android:visibility="invisible"
+        android:id="@+id/rl"
+        android:background="@color/pinks"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_headImg"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="18dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/userss"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_wrapinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_headImg"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textColor="@color/sligntblack"
+                    />
+                <com.biotag.vehiclenumberscanning.view.MyTextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_name"
+                    android:text="                 "
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:focusable="true"
+                    android:textColor="@color/sligntblack"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company:"
+                    android:textColor="@color/sligntblack"/>
+                <com.biotag.vehiclenumberscanning.view.MyTextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_company"
+                    android:text="                 "
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:focusable="true"
+                    android:textColor="@color/sligntblack"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_credential"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EC ID:"
+                    android:textColor="@color/sligntblack"/>
+                <com.biotag.vehiclenumberscanning.view.MyTextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_credential"
+                    android:text="                 "
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:focusable="true"
+                    android:textColor="@color/sligntblack"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_access"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Access Level:"
+                    android:textColor="@color/sligntblack"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_access"
+                    android:text="                 "
+                    android:textColor="@color/sligntblack"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_access2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Access Level:"
+                    android:textColor="@color/sligntblack"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_access2"
+                    android:text="                 "
+                    android:textColor="@color/sligntblack"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_approved"
+            android:layout_below="@+id/ll_wrapinfo"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="79dp"
+            android:textColor="@color/deepgreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APPROVED"/>
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/denied"
+            android:layout_below="@+id/ll_wrapinfo"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="79dp"
+            android:textColor="@color/deepred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DENIED" />
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:textAllCaps="false"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:background="@color/gray"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="5dp"/>
+        <Button
+            android:id="@+id/btn_scanneron"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@color/green"
+            android:text="Scanner on"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_alignBottom="@+id/btn_back"
+            android:layout_toLeftOf="@+id/btn_back"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/fl_anim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/homepage_disk_button_orange_normal" />
+
+        <ImageView
+            android:id="@+id/iv_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/homepage_disk_orange_normal" />
+
+        <com.biotag.vehiclenumberscanning.view.RadiationView
+            android:id="@+id/rv"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:text="Scanning..."
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </FrameLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@color/white"
+        android:id="@+id/rl_wrong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/wrong"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_wrong"
+            android:text="DENIED"
+            android:textColor="@color/deepred"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_marginLeft="88dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginBottom="123dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="读取卡片失败，点击屏幕重新扫描"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="90dp"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
